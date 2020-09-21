@@ -17,5 +17,5 @@ cmdX(){
 	fi
 }
 
-cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-datetime.static.compile.info
-cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-datetime.dynamic.compile.info
+cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-datetime.static.compile
+cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-datetime.dynamic.compile
