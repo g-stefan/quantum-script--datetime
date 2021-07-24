@@ -46,23 +46,18 @@ namespace Quantum {
 				class VariableDateTime :
 					public Variable {
 						XYO_DISALLOW_COPY_ASSIGN_MOVE(VariableDateTime);
+						XYO_DYNAMIC_TYPE_DEFINE(QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT, VariableDateTime);
 					protected:
 						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT static const char *strTypeDateTime;
-						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT static const char *typeDateTimeKey;
-						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT static const void *typeDateTime;
 					public:
 
 						XYO::DateTime value;
 
-						inline VariableDateTime() {
-							variableType = registerType(typeDateTime, typeDateTimeKey);
-						};
+						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT VariableDateTime();
 
 						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT static Variable *newVariable();
 
-						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT String getType();
-
-						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT Variable &operatorReference(Symbol symbolId);
+						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT String getVariableType();
 
 						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT Variable *instancePrototype();
 
@@ -70,15 +65,6 @@ namespace Quantum {
 
 						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT bool toBoolean();
 						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT String toString();
-
-						//
-						inline static bool isVariableDateTime(const Variable *value) {
-							if(typeDateTime == nullptr) {
-								typeDateTime = registerType(typeDateTime, typeDateTimeKey);
-							};
-							return (value->variableType == typeDateTime);
-						};
-
 				};
 
 			};

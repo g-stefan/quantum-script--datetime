@@ -32,11 +32,14 @@ namespace Quantum {
 				using namespace XYO;
 				using namespace Quantum::Script;
 
-				const char *VariableDateTime::typeDateTimeKey = "{18EC322A-3BE8-4107-8D89-65C24C7E1561}";
-				const void *VariableDateTime::typeDateTime;
+				XYO_DYNAMIC_TYPE_IMPLEMENT(VariableDateTime, "{18EC322A-3BE8-4107-8D89-65C24C7E1561}");
 				const char *VariableDateTime::strTypeDateTime = "DateTime";
 
-				String VariableDateTime::getType() {
+				VariableDateTime::VariableDateTime() {
+					XYO_DYNAMIC_TYPE_PUSH(VariableDateTime);
+				};
+
+				String VariableDateTime::getVariableType() {
 					return strTypeDateTime;
 				};
 
@@ -44,11 +47,8 @@ namespace Quantum {
 					return (Variable *) TMemory<VariableDateTime>::newMemory();
 				};
 
-				Variable &VariableDateTime::operatorReference(Symbol symbolId) {
-					return operatorReferenceX(symbolId, (Extension::DateTime::getContext())->prototypeDateTime->prototype);
-				};
-
 				Variable *VariableDateTime::instancePrototype() {
+					printf("VariableDateTime::instancePrototype:%p\n",this);
 					return (Extension::DateTime::getContext())->prototypeDateTime->prototype;
 				};
 
