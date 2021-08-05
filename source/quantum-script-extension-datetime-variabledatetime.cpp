@@ -48,7 +48,6 @@ namespace Quantum {
 				};
 
 				Variable *VariableDateTime::instancePrototype() {
-					printf("VariableDateTime::instancePrototype:%p\n",this);
 					return (Extension::DateTime::getContext())->prototypeDateTime->prototype;
 				};
 
