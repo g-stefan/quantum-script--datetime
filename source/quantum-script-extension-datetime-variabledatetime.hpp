@@ -11,7 +11,7 @@
 #define QUANTUM_SCRIPT_EXTENSION_DATETIME_VARIABLEDATETIME_HPP
 
 #ifndef QUANTUM_SCRIPT_VARIABLE_HPP
-#include "quantum-script-variable.hpp"
+#	include "quantum-script-variable.hpp"
 #endif
 
 namespace Quantum {
@@ -26,12 +26,10 @@ namespace Quantum {
 	};
 };
 
-
 namespace XYO {
 	namespace ManagedMemory {
-		template<>
-		class TMemory<Quantum::Script::Extension::DateTime::VariableDateTime>:
-			public TMemoryPoolActive<Quantum::Script::Extension::DateTime::VariableDateTime> {};
+		template <>
+		class TMemory<Quantum::Script::Extension::DateTime::VariableDateTime> : public TMemoryPoolActive<Quantum::Script::Extension::DateTime::VariableDateTime> {};
 	};
 };
 
@@ -43,14 +41,14 @@ namespace Quantum {
 				using namespace XYO;
 				using namespace Quantum::Script;
 
-				class VariableDateTime :
-					public Variable {
+				class VariableDateTime : public Variable {
 						XYO_DISALLOW_COPY_ASSIGN_MOVE(VariableDateTime);
 						XYO_DYNAMIC_TYPE_DEFINE(QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT, VariableDateTime);
+
 					protected:
 						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT static const char *strTypeDateTime;
-					public:
 
+					public:
 						XYO::DateTime value;
 
 						QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT VariableDateTime();
@@ -71,6 +69,5 @@ namespace Quantum {
 		};
 	};
 };
-
 
 #endif

@@ -11,23 +11,23 @@
 #define QUANTUM_SCRIPT_EXTENSION_DATETIME_HPP
 
 #ifndef QUANTUM_SCRIPT_HPP
-#include "quantum-script.hpp"
+#	include "quantum-script.hpp"
 #endif
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_DATETIME__EXPORT_HPP
-#include "quantum-script-extension-datetime--export.hpp"
+#	include "quantum-script-extension-datetime--export.hpp"
 #endif
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_DATETIME_COPYRIGHT_HPP
-#include "quantum-script-extension-datetime-copyright.hpp"
+#	include "quantum-script-extension-datetime-copyright.hpp"
 #endif
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_DATETIME_LICENSE_HPP
-#include "quantum-script-extension-datetime-license.hpp"
+#	include "quantum-script-extension-datetime-license.hpp"
 #endif
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_DATETIME_VERSION_HPP
-#include "quantum-script-extension-datetime-version.hpp"
+#	include "quantum-script-extension-datetime-version.hpp"
 #endif
 
 namespace Quantum {
@@ -38,11 +38,10 @@ namespace Quantum {
 				using namespace XYO;
 				using namespace Quantum::Script;
 
-				class DateTimeContext:
-					public Object {
+				class DateTimeContext : public Object {
 						XYO_DISALLOW_COPY_ASSIGN_MOVE(DateTimeContext);
-					public:
 
+					public:
 						Symbol symbolFunctionDateTime;
 						TPointerX<Prototype> prototypeDateTime;
 
@@ -60,4 +59,3 @@ namespace Quantum {
 };
 
 #endif
-

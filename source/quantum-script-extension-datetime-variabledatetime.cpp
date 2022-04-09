@@ -21,12 +21,10 @@
 #include "quantum-script-variablenumber.hpp"
 #include "quantum-script-variablestring.hpp"
 
-
 namespace Quantum {
 	namespace Script {
 		namespace Extension {
 			namespace DateTime {
-
 
 				using namespace XYO;
 				using namespace XYO;
@@ -44,7 +42,7 @@ namespace Quantum {
 				};
 
 				Variable *VariableDateTime::newVariable() {
-					return (Variable *) TMemory<VariableDateTime>::newMemory();
+					return (Variable *)TMemory<VariableDateTime>::newMemory();
 				};
 
 				Variable *VariableDateTime::instancePrototype() {
@@ -69,5 +67,3 @@ namespace Quantum {
 		};
 	};
 };
-
-

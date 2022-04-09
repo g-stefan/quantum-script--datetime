@@ -16,7 +16,7 @@
 #include "quantum-script-extension-datetime.hpp"
 #include "quantum-script-extension-datetime-variabledatetime.hpp"
 #ifndef QUANTUM_SCRIPT_EXTENSION_DATETIME_NO_VERSION
-#include "quantum-script-extension-datetime-version.hpp"
+#	include "quantum-script-extension-datetime-version.hpp"
 #endif
 
 #include "quantum-script-variableboolean.hpp"
@@ -63,16 +63,15 @@ namespace Quantum {
 					dateTimeContext->prototypeDateTime.newMemory();
 
 					defaultPrototypeFunction = (VariableFunction *)VariableFunction::newVariable(nullptr, nullptr, nullptr, functionDateTime, nullptr, nullptr);
-					(Context::getGlobalObject())->setPropertyBySymbol(dateTimeContext->symbolFunctionDateTime,defaultPrototypeFunction);
+					(Context::getGlobalObject())->setPropertyBySymbol(dateTimeContext->symbolFunctionDateTime, defaultPrototypeFunction);
 					dateTimeContext->prototypeDateTime = defaultPrototypeFunction->prototype;
 				};
-
 
 				static TPointer<Variable> getYear(VariableFunction *function, Variable *this_, VariableArray *arguments) {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-get-year\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
@@ -83,7 +82,7 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-get-month\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
@@ -94,7 +93,7 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-get-day\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
@@ -105,7 +104,7 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-get-day-of-week\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
@@ -116,7 +115,7 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-get-hour\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
@@ -127,7 +126,7 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-get-minute\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
@@ -138,7 +137,7 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-get-second\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
@@ -149,7 +148,7 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-get-miliseconds\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
@@ -160,12 +159,12 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-set-year\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
 					Number value = (arguments->index(0))->toNumber();
-					if(isnan(value) || isinf(value) || signbit(value)) {
+					if (isnan(value) || isinf(value) || signbit(value)) {
 						return VariableBoolean::newVariable(false);
 					};
 
@@ -178,12 +177,12 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-set-month\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
 					Number value = (arguments->index(0))->toNumber();
-					if(isnan(value) || isinf(value) || signbit(value)) {
+					if (isnan(value) || isinf(value) || signbit(value)) {
 						return VariableBoolean::newVariable(false);
 					};
 
@@ -196,12 +195,12 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-set-day\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
 					Number value = (arguments->index(0))->toNumber();
-					if(isnan(value) || isinf(value) || signbit(value)) {
+					if (isnan(value) || isinf(value) || signbit(value)) {
 						return VariableBoolean::newVariable(false);
 					};
 
@@ -214,12 +213,12 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-set-day-of-week\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
 					Number value = (arguments->index(0))->toNumber();
-					if(isnan(value) || isinf(value) || signbit(value)) {
+					if (isnan(value) || isinf(value) || signbit(value)) {
 						return VariableBoolean::newVariable(false);
 					};
 
@@ -232,12 +231,12 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-set-hour\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
 					Number value = (arguments->index(0))->toNumber();
-					if(isnan(value) || isinf(value) || signbit(value)) {
+					if (isnan(value) || isinf(value) || signbit(value)) {
 						return VariableBoolean::newVariable(false);
 					};
 
@@ -250,12 +249,12 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-set-minute\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
 					Number value = (arguments->index(0))->toNumber();
-					if(isnan(value) || isinf(value) || signbit(value)) {
+					if (isnan(value) || isinf(value) || signbit(value)) {
 						return VariableBoolean::newVariable(false);
 					};
 
@@ -268,12 +267,12 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-set-second\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
 					Number value = (arguments->index(0))->toNumber();
-					if(isnan(value) || isinf(value) || signbit(value)) {
+					if (isnan(value) || isinf(value) || signbit(value)) {
 						return VariableBoolean::newVariable(false);
 					};
 
@@ -286,12 +285,12 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-set-miliseconds\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
 					Number value = (arguments->index(0))->toNumber();
-					if(isnan(value) || isinf(value) || signbit(value)) {
+					if (isnan(value) || isinf(value) || signbit(value)) {
 						return VariableBoolean::newVariable(false);
 					};
 
@@ -300,12 +299,11 @@ namespace Quantum {
 					return VariableBoolean::newVariable(true);
 				};
 
-
 				static TPointer<Variable> toUnixTime(VariableFunction *function, Variable *this_, VariableArray *arguments) {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-to-unix-time\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
@@ -316,12 +314,12 @@ namespace Quantum {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
 					printf("- datetime-from-unix-time\n");
 #endif
-					if(!TIsType<VariableDateTime>(this_)) {
+					if (!TIsType<VariableDateTime>(this_)) {
 						throw(Error("invalid parameter"));
 					};
 
 					Number value = (arguments->index(0))->toNumber();
-					if(isnan(value) || isinf(value) || signbit(value)) {
+					if (isnan(value) || isinf(value) || signbit(value)) {
 						return VariableBoolean::newVariable(false);
 					};
 
@@ -375,7 +373,6 @@ namespace Quantum {
 					executive->setFunction2("DateTime.prototype.toUnixTime()", toUnixTime);
 					executive->setFunction2("DateTime.prototype.fromUnixTime(x)", fromUnixTime);
 					executive->setFunction2("DateTime.timestampInMilliseconds(x)", timestampInMilliseconds);
-
 				};
 
 			};
@@ -388,4 +385,3 @@ extern "C" QUANTUM_SCRIPT_EXTENSION_DATETIME_EXPORT void quantumScriptExtension(
 	Quantum::Script::Extension::DateTime::initExecutive(executive, extensionId);
 };
 #endif
-
