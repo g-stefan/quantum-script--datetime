@@ -13,41 +13,40 @@
 
 namespace XYO::QuantumScript::Extension::DateTime {
 
-				class VariableDateTime;
-			
+	class VariableDateTime;
+
 };
 
 namespace XYO::ManagedMemory {
-		template <>
-		class TMemory<XYO::QuantumScript::Extension::DateTime::VariableDateTime> : public TMemoryPoolActive<XYO::QuantumScript::Extension::DateTime::VariableDateTime> {};	
+	template <>
+	class TMemory<XYO::QuantumScript::Extension::DateTime::VariableDateTime> : public TMemoryPoolActive<XYO::QuantumScript::Extension::DateTime::VariableDateTime> {};
 };
 
 namespace XYO::QuantumScript::Extension::DateTime {
 
-				class VariableDateTime : public Variable {
-						XYO_DISALLOW_COPY_ASSIGN_MOVE(VariableDateTime);
-						XYO_DYNAMIC_TYPE_DEFINE(XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT, VariableDateTime);
+	class VariableDateTime : public Variable {
+			XYO_DISALLOW_COPY_ASSIGN_MOVE(VariableDateTime);
+			XYO_DYNAMIC_TYPE_DEFINE(XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT, VariableDateTime);
 
-					protected:
-						XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT static const char *strTypeDateTime;
+		protected:
+			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT static const char *strTypeDateTime;
 
-					public:
-						XYO::System::DateTime value;
+		public:
+			XYO::System::DateTime value;
 
-						XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT VariableDateTime();
+			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT VariableDateTime();
 
-						XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT static Variable *newVariable();
+			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT static Variable *newVariable();
 
-						XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT String getVariableType();
+			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT String getVariableType();
 
-						XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT Variable *instancePrototype();
+			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT Variable *instancePrototype();
 
-						XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT Variable *clone(SymbolList &inSymbolList);
+			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT Variable *clone(SymbolList &inSymbolList);
 
-						XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT bool toBoolean();
-						XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT String toString();
-				};
-
+			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT bool toBoolean();
+			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT String toString();
+	};
 
 };
 
