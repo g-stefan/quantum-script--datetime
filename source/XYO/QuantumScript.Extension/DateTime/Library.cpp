@@ -47,7 +47,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> getYear(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-get-year\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -58,7 +58,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> getMonth(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-get-month\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -69,7 +69,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> getDay(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-get-day\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -80,7 +80,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> getDayOfWeek(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-get-day-of-week\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -91,7 +91,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> getHour(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-get-hour\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -102,7 +102,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> getMinute(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-get-minute\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -113,7 +113,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> getSecond(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-get-second\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -124,7 +124,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> getMilliseconds(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-get-miliseconds\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -135,7 +135,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> setYear(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-set-year\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -153,7 +153,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> setMonth(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-set-month\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -171,7 +171,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> setDay(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-set-day\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -189,7 +189,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> setDayOfWeek(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-set-day-of-week\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -207,7 +207,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> setHour(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-set-hour\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -225,7 +225,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> setMinute(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-set-minute\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -243,7 +243,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> setSecond(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-set-second\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -261,7 +261,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> setMilliseconds(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-set-miliseconds\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -279,7 +279,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> toUnixTime(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-to-unix-time\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -290,7 +290,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> fromUnixTime(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-from-unix-time\n");
 #endif
 		if (!TIsType<VariableDateTime>(this_)) {
@@ -308,7 +308,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	};
 
 	static TPointer<Variable> timestampInMilliseconds(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- datetime-timestamp-in-milliseconds\n");
 #endif
 
