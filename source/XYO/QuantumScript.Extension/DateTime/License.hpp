@@ -13,8 +13,8 @@
 
 namespace XYO::QuantumScript::Extension::DateTime::License {
 
-	XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT const char *license();
-	XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT const char *shortLicense();
+	XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT std::string license();
+	XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT std::string shortLicense();
 
 };
 

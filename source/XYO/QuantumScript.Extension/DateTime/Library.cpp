@@ -322,7 +322,7 @@ namespace XYO::QuantumScript::Extension::DateTime {
 	void initExecutive(Executive *executive, void *extensionId) {
 
 		String info = "DateTime\r\n";
-		info << License::shortLicense();
+		info << License::shortLicense().c_str();
 
 		executive->setExtensionName(extensionId, "DateTime");
 		executive->setExtensionInfo(extensionId, info);
