@@ -14,7 +14,7 @@
 namespace XYO::QuantumScript::Extension::DateTime {
 
 	class DateTimeContext : public Object {
-			XYO_DISALLOW_COPY_ASSIGN_MOVE(DateTimeContext);
+			XYO_PLATFORM_DISALLOW_COPY_ASSIGN_MOVE(DateTimeContext);
 
 		public:
 			Symbol symbolFunctionDateTime;

@@ -25,7 +25,7 @@ namespace XYO::ManagedMemory {
 namespace XYO::QuantumScript::Extension::DateTime {
 
 	class VariableDateTime : public Variable {
-			XYO_DISALLOW_COPY_ASSIGN_MOVE(VariableDateTime);
+			XYO_PLATFORM_DISALLOW_COPY_ASSIGN_MOVE(VariableDateTime);
 			XYO_DYNAMIC_TYPE_DEFINE(XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT, VariableDateTime);
 
 		protected:
