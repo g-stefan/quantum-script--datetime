@@ -36,6 +36,10 @@ namespace XYO::QuantumScript::Extension::DateTime {
 
 			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT VariableDateTime();
 
+			// Called by the memory pool on every allocation, also for recycled objects:
+			// sets value to the current local date and time
+			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT void activeConstructor();
+
 			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT static Variable *newVariable();
 
 			XYO_QUANTUMSCRIPT_EXTENSION_DATETIME_EXPORT String getVariableType();

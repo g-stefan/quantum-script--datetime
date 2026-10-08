@@ -24,6 +24,11 @@ namespace XYO::QuantumScript::Extension::DateTime {
 		XYO_DYNAMIC_TYPE_PUSH(VariableDateTime);
 	};
 
+	void VariableDateTime::activeConstructor() {
+		XYO::System::DateTime now;
+		value.copy(now);
+	};
+
 	String VariableDateTime::getVariableType() {
 		return strTypeDateTime;
 	};
