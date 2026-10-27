@@ -1,6 +1,5 @@
 {
 	"solution": {
-		"namespace" : "xyo",
 		"name" : "quantum-script--datetime",
 		"type" : "xyo-cpp",
 		"projects": [
